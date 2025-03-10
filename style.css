@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'WorkSans';
+    src: url('assets/fonts/static/WorkSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'WorkSans';
+    src: url('assets/fonts/static/WorkSans-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'WorkSans';
+    src: url('assets/fonts/static/WorkSans-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'WorkSans';
+    src: url('assets/fonts/WorkSans-Italic-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+body {
+    font-family: 'WorkSans', sans-serif;
+    font-weight: normal;
+    background-color: #f8f0fc;
+    background-image: url(assets/images/background-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+}
+
+svg {
+    max-width: 100%;
+    display: block;
+}
+
+button {
+    font-family: 'WorkSans', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: transparent;
+    width: 100%;
+    padding: 16px 0;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    border: 0;
+}
+
+button:hover {
+    color: purple;
+}
+
+.faq-container {
+    background-color: white;
+    max-width: 800px;
+    padding: 24px;
+    margin: 16px;
+    border-radius: 16px;
+}
+
+.faq-title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.faq-title h1 {
+    font-family: 'WorkSans', sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.faq-accordion-container .accordion-item {
+    border-bottom: 2px solid rgb(240, 223, 226);
+}
+
+.accordion-item .icons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.accordion-item .icons svg {
+    min-width: 30px;
+    width: 30px;
+    height: 30px;
+}
+
+.accordion-item .icons svg:last-child {
+    display: none;
+}
+
+.accordion-description {
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 200ms ease;
+}
+
+.accordion-description p {
+    font-family: 'WorkSans', sans-serif;
+    font-weight: normal;
+    font-style: italic;
+    color: rgb(126, 85, 126);
+    padding: 1.5rem 0;
+}
+
+@media (max-width: 540px) {
+    body {
+        background-image: url(assets/images/background-pattern-mobile.svg);
+    }
+}
